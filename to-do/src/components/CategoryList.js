@@ -9,6 +9,7 @@ const CategoryListBlock = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px;
     overflow-y: auto;
+    overflow-x: hidden;
     box-sizing: border-box;
     padding: 12px 20px 0;
 `;
