@@ -1,30 +1,23 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+import { Route } from 'react-router-dom';
 
-import TodoTemplate from './components/TodoTemplate';
-import TodoHead from './components/TodoHead';
-import TodoList from './components/TodoList';
-import TodoCreate from './components/TodoCreate';
-import { TodoProvider } from './TodoContext';
+import Home from './Home';
+import './App.css';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    display: grid;
-    place-content: center;
+    display: block;
     background: #e4e4e4;
   }
 `;
 
 function App() {
   return (
-    <TodoProvider>
+    <div className="App">
       <GlobalStyle />
-      <TodoTemplate>
-        <TodoHead />
-        <TodoList />
-        <TodoCreate />
-      </TodoTemplate>
-    </TodoProvider>
+      <Route path="/" exact={true} component={Home} />
+    </div>
   );
 }
 
