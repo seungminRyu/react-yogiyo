@@ -20,7 +20,7 @@ const CategoryItemBlock = styled.div`
     }
 
     &.sale:hover {
-        background-size: 115%;
+        background-size: 113%;
     }
 
     .category-item-wrapper {
